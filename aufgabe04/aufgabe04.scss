@@ -1,0 +1,20 @@
+/* Aufgabe 4.) a.) */
+
+@mixin margin($value){
+  margin: $value;
+}
+
+/* Aufgabe 4.) b.) */
+
+@mixin breakpoint($width){
+  @media (min-width: $width){
+    @content;
+  }
+}
+
+.mobileInvisible {
+  display: none;
+  @include breakpoint(990px) {
+    display: block;
+  }
+}
